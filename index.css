@@ -40,9 +40,9 @@
     
 }
 
-#cirle-text :hover {
-    background-color: blue;
-}
+/* #circle-text:hover {
+    transform: scale(2);
+} */
 
 #pic-wrapper{
     position: absolute;
