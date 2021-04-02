@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+
+    }
+    to {
+        transform: rotate(360deg);
+
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+#index-wrapper{
+    /* background-color: white; */
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#circle-text{
+    height:90%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: dimgray;
+    font-size: 2em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    
+}
+
+#cirle-text :hover {
+    background-color: blue;
+}
+
+#pic-wrapper{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    translate: -2.5% -10%;
+
+}
+
+
+.rotate {
+    animation: rotate 15s infinite linear;
+}
