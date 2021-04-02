@@ -33,7 +33,7 @@ window.onload = function() {
         origin = 0;
     
         txt.forEach((ea) => {
-            ea = `<p style='height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:center; '>${ea}</p>`;
+            ea = `<p style="height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:center; ">${ea}</p>`;
             textWrapper.innerHTML += ea;
             origin += deg;
         });
@@ -44,11 +44,13 @@ window.onload = function() {
         let profilePic = document.createElement("img");
         profilePic.src = "selfpic.png"
         picWrapper.appendChild(profilePic);
-        profilePic.style.height = radius / 1.4 + 'px'
-        profilePic.style.width = 'auto'
+        profilePic.style.height = radius / 1.4 + "px"
+        profilePic.style.width = "auto"
     }
     
     circularText("ENGINEER • DEVELOPER • THINKER • TEACHER • ");
-    window.addEventListener('resize', resizeContent )
+    window.addEventListener("resize", resizeContent )
+    window.addEventListener("orientationchange", resizeContent )
+    
     
 }
