@@ -31,8 +31,8 @@ body, html {
 }
 
 #circle-text{
-    height:90%;
-    width: 90%;
+    height:95%;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: center;

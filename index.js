@@ -44,7 +44,7 @@ window.onload = function() {
         let profilePic = document.createElement("img");
         profilePic.src = "selfpic.png"
         picWrapper.appendChild(profilePic);
-        profilePic.style.height = radius / 1.4 + "px"
+        profilePic.style.height = radius / 1.5 + "px"
         profilePic.style.width = "auto"
     }
     
