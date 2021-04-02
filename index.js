@@ -1,5 +1,3 @@
-
-
 window.onload = function() {
 
     function removeAllChildNodes(parent) {
@@ -7,14 +5,6 @@ window.onload = function() {
             parent.removeChild(parent.firstChild);
         }
     }
-
-    // function profilePicture() {
-    //     // let picWrapper = document.querySelector("#pic-wrapper")
-    //     // let profilePic = document.createElement("img");
-    //     // profilePic.src = "selfpic.png"
-    //     // picWrapper.appendChild(profilePic);
-
-    // }
 
     function resizeContent(){
 
@@ -39,7 +29,7 @@ window.onload = function() {
 
         const radius =  wrapperWidth < wrapperHeight ? wrapperWidth * 1 : wrapperHeight * 1
       
-        var deg = 360 / txt.length,
+        let deg = 360 / txt.length,
         origin = 0;
     
         txt.forEach((ea) => {
@@ -59,7 +49,6 @@ window.onload = function() {
     }
     
     circularText("ENGINEER • DEVELOPER • THINKER • TEACHER • ");
-
     window.addEventListener('resize', resizeContent )
     
 }
