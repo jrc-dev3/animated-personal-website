@@ -1,26 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap");
 
 @keyframes rotate {
-    from {
-        transform: rotate(0);
-
-    }
-    to {
-        transform: rotate(360deg);
-
-    }
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body, html {
-    height: 100%;
+  from {
+    transform: rotate(0);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
+body,
+html {
+  height: 100%;
+  font-family: 'Fredericka the Great', cursive;
+  /* font-size: clamp(100%, 1rem + 2vw, 2vw); */
+}
+
+/* 
 #index-wrapper{
+    position: relative;
     height: 100%;
     width: 100%;
     text-align: center;
@@ -28,29 +26,188 @@ body, html {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+} */
+
+#index-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-#circle-text{
-    height:95%;
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: dimgray;
-    font-size: 2em;
-    font-family: 'Open Sans Condensed', sans-serif;
-    
+#headerbox {
+  background-color: black;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 3em;
+  font-size: clamp(7vw, 1rem + 2vw,100vw);
 }
 
-#pic-wrapper{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    translate: 0 -7%;
+#container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+#content {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  overflow: scroll;
+}
+
+.entry {
+  background-color: black;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  padding: 2% 2%;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+
+}
+
+.skills__entry  h1:nth-child(1) {
+  flex-shrink: 1;
+  font-size: clamp(7vw, 1rem + 2vw,15vw);
+  border-bottom: white 3px solid;
+}
+
+.skills__entry h2:nth-child(2) {
+  /* flex-grow: 3; */
+  font-size: clamp(25vw, 1rem + 1vw,50vw);
+
+}
+
+.contact__entry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+@media (max-width: 800px) {
+  .contact__entry {
+    flex-direction: column;
+  }
+}
+
+.contact__entry h1:nth-child(1){
+  font-size: clamp(11vw, 1rem + 2vw,15vw);
+  /* min-width: 50%; */
+  text-align: left;
+}
+
+
+.contact__entry > div{
+  font-size: clamp(7vw, 1rem + 2vw,15vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 25%
+  /* min-width: 50%; */
+}
+
+.emptyfiller {
+  background-color: none;
+  height: 75%;
+}
+
+#circle-text {
+  height: 95%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: dimgray;
+  font-size: 2em;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+#pic-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  translate: 0 -7%;
+}
 
 .rotate {
-    animation: rotate 15s infinite linear;
+  animation: rotate 15s infinite linear;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+.nametext {
+  font-weight: 200;
+  /* font-size: 3.2em; */
+  font-size: clamp(11vw, 1rem + 2vw,100vw);;
+}
+
+.nametext .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  color: white;
+}
+
+.nametext .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  top: 2px;
+}
+
+.nametext .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.bulletswrapper{
+  font-weight: 200;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.span__wrapper {
+  position: relative;
+  /* display: inline-block; */
+  overflow: hidden;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.letter {
+  display: inline-block;
+  /* line-height: 1em; */
+
 }

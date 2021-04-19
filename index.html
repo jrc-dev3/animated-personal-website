@@ -1,21 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jrc.</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script> 
-</head>
-<body>
-
-    <div id="index-wrapper">
-
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="index-wrapper">
         <div id="circle-text" class="rotate"></div>
 
-        <div id="pic-wrapper"> </div>
+        <div id="pic-wrapper"></div>
+      </div>
 
+      <div id="content">
+        <div id="headerbox">
+          <h1 class="bulletpoints">
+            <span class="bulletswrapper span__wrapper">
+              <span class="letters">+ investor</span>
+              <span class="letters">+ hobby artist</span>
+              <span class="letters">+ self-taught developer</span>
+              <span class="letters">+ college-educated engineer</span>
+            </span>
+          </h1>
+
+          <h1 class="nametext">
+            <span class="text-wrapper">
+              <span class="letters">JOSE CAICEDO</span>
+              <span class="line"></span>
+            </span>
+          </h1>
+        </div>
+
+        <div class="emptyfiller"></div>
+
+        <div class="skills__entry entry">
+
+            <h1 class="skills__entry__header">
+                <span class="span__wrapper">
+                  <span>
+                    I'VE TAUGHT MYSELF...
+                  </span>
+
+                </span>
+            </h1>
+
+
+            <h2 class="skills__entry__content">
+                <span class="span__wrapper flex-row" ></span>
+            </h2>
+
+
+        </div>
+
+        <div class="emptyfiller"></div>
+
+        <div class="contact__entry entry">
+            <h1 class="contact__entry__header">
+              <span class="span__wrapper" >
+                <span class="letters">FEELING</span>
+                <br/>
+                <span class="letters">TALKATIVE?</span>
+              </span>
+
+            </h1>
+
+            <div>
+              <textarea name="messageInput" id="messageInput" cols="30" rows="10"></textarea>
+              <button disabled="disabled"></button>
+            </div>
+
+
+        </div>
+
+        <div class="emptyfiller"></div>
+
+        <!-- <div class="entry">
+            <h2>
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tortor lorem, hendrerit a lorem quis, viverra vulputate augue. Nullam ligula ante, fringilla ac convallis quis, aliquam vel tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer rutrum enim at leo lobortis consequat tristique quis tellus. Curabitur suscipit ipsum quis mauris malesuada hendrerit. Sed ac semper purus. Cras ac ligula nec lectus imperdiet finibus at vitae justo. Duis venenatis tellus quis eleifend tincidunt. Sed quis nibh suscipit, sollicitudin mauris in, bibendum nisi. Nulla facilisis mollis dolor at scelerisque. Nulla quis ante posuere, cursus purus sed, aliquet justo. Vestibulum ut vestibulum erat, ac cursus tortor. Phasellus imperdiet velit non congue vestibulum.
+                </span>
+            </h2>
+        </div> -->
+
+        <div style="height: 25%" class="emptyfiller"></div>
+<!-- 
+        <div class="testspace" style="height:50%; background-color: black;">
+
+        </div> -->
+
+        <!-- <div class="emptyfiller"></div> -->
+
+        <!-- <div class="textspace" style="height:50%; background-color: black;">
+
+        </div> -->
+      </div>
     </div>
-    
-</body>
+
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
+  </body>
 </html>
