@@ -13,7 +13,9 @@ window.onload = function () {
     removeAllChildNodes(picWrapper);
 
     circularText("ENGINEER • DEVELOPER • THINKER • TEACHER • ");
+   // handleSkillsAnimation();
   }
+  
 
   function circularText(txt) {
     txt = txt.split("");
@@ -43,18 +45,6 @@ window.onload = function () {
     profilePic.style.height = radius / 1.5 + "px";
     profilePic.style.width = "auto";
 
-    // let letters = document.querySelectorAll("p")
-
-    // letters.forEach(letter => {
-    //     letter.addEventListener("mouseover", ()=>{
-    //         textWrapper.classList.add("paused");
-    //     })
-
-    //     letter.addEventListener("mouseout", ()=>{
-    //         textWrapper.classList.remove("paused");
-    //     })
-
-    // })
   }
 
   circularText("ENGINEER • DEVELOPER • THINKER • TEACHER • ");
@@ -146,22 +136,29 @@ window.onload = function () {
 
   headerObserver.observe(document.querySelector("#headerbox"));
 
-  let skillsWrapperLength = parseInt(
-    anime
-      .get(document.querySelector(".skills__entry__content"), "width")
-      .replace("px", "")
-  );
+  function handleSkillsAnimation() {
+    const skillsWrapperLength = parseInt(
+      anime
+        .get(document.querySelector(".skills__entry__content"), "width")
+        .replace("px", "")
+    );
+  
+    const skillsAnimation = anime.timeline({ loop: true }).add({
+      targets: ".skills__entry h2",
+      // scaleX: [0, 1],
+      translateX: [skillsWrapperLength / 1.85, -skillsWrapperLength / 1.85],
+      // opacity: [0, 1],
+      easing: "linear",
+      duration: skillsWrapperLength * 4,
+    });
 
-  anime.timeline({ loop: true }).add({
-    targets: ".skills__entry h2",
-    // scaleX: [0, 1],
-    translateX: [skillsWrapperLength / 1.85, -skillsWrapperLength / 1.85],
-    // opacity: [0, 1],
-    easing: "linear",
-    duration: skillsWrapperLength * 4,
-  });
+    skillsAnimation.play()
 
-  let contactAnimation = anime
+  }
+  handleSkillsAnimation();
+
+
+  const contactAnimation = anime
     .timeline({ loop: true })
     .add({
       targets: ".contact__entry__header .letter",
@@ -182,12 +179,43 @@ window.onload = function () {
 
     contactAnimation.play()
 
-  // let contactObserver = new IntersectionObserver(
-  //   function (entries) {
-  //     if (entries[0].isIntersecting) contactAnimation.play();
-  //   },
-  //   { threshold: [0] }
-  // );
+    let contactButton = document.querySelector(".contactButton")
 
-  // contactObserver.observe(document.querySelector(".contact__entry"));
+    function handleContactSumbit(){
+
+
+      let textInput = document.querySelector("#messageInput")
+
+      if(textInput.value){
+        contactButton.disabled=true;
+
+        const data = {
+          message: textInput.value
+        };
+  
+        fetch("https://api.jcaicedo.io/v2/awsSendMail", {
+          method: "POST", 
+          body: JSON.stringify(data)
+        }).then(_ => {
+          contactButton.style.backgroundColor="green"
+          contactButton.style.color="white"
+          contactButton.innerHTML="SENT!"
+          textInput.value=""
+          contactButton.disabled=false;
+  
+        })
+        .catch(_ => {
+          contactButton.style.backgroundColor="red"
+          contactButton.style.color="white"
+          contactButton.innerHTML="WOOPS SOMETHING WENT WRONG!"
+          contactButton.disabled=false;
+        });
+      } else{
+        contactButton.innerHTML="WRITE SOMETHING FIRST!"
+
+      }
+    }
+
+    contactButton.addEventListener("click", handleContactSumbit)
+
 };

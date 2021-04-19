@@ -98,7 +98,8 @@ html {
 .contact__entry {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 30px;
   padding: 10px;
 }
 
@@ -120,8 +121,13 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 25%
+  height: 30%
   /* min-width: 50%; */
+}
+
+.contactButton{
+  height: 20%;;
+  background-color: white;
 }
 
 .emptyfiller {
