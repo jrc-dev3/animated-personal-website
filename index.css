@@ -181,11 +181,11 @@ html {
   opacity: 0;
   position: absolute;
   left: 0;
-  height: 2px;
+  height: 3px;
   width: 100%;
   background-color: #fff;
   transform-origin: 100% 100%;
-  top: 2px;
+  top: 10%;
 }
 
 .nametext .letter {
@@ -193,12 +193,13 @@ html {
   line-height: 1em;
 }
 
+.bulletpoints{
+  text-align: left;
+}
+
 .bulletswrapper{
   font-weight: 200;
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .span__wrapper {

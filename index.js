@@ -207,7 +207,7 @@ window.onload = function () {
         .catch(_ => {
           contactButton.style.backgroundColor="red"
           contactButton.style.color="white"
-          contactButton.innerHTML="WOOPS SOMETHING WENT WRONG!"
+          contactButton.innerHTML="THIS IS EMBARRASSING..."
           contactButton.disabled=false;
         });
       } else{
